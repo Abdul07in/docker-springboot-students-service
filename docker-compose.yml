@@ -1,4 +1,4 @@
-version: "2.9.7"
+version: "3.8"
 
 services:
   app:
@@ -17,7 +17,12 @@ services:
       - "5432:5432"
     networks:
       - s-network
+    volumes:
+      - postgres-s-data:/var/lib/postgresql/data
 
 networks:
   s-network:
     driver: bridge
+
+volumes:
+    postgres-s-data:
