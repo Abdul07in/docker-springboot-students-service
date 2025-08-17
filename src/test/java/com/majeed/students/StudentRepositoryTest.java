@@ -1,6 +1,8 @@
-package com.majeed.students.repository;
+package com.majeed.students;
 
 import com.majeed.students.model.Student;
+import com.majeed.students.repository.StudentRepository;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

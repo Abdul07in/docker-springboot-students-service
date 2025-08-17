@@ -1,4 +1,4 @@
-package com.majeed.students.controller;
+package com.majeed.students;
 
 import com.majeed.students.model.Student;
 import com.majeed.students.repository.StudentRepository;
