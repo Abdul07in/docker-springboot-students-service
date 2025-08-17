@@ -1,5 +1,6 @@
 package com.majeed.students;
 
+import com.majeed.students.controller.StudentController;
 import com.majeed.students.model.Student;
 import com.majeed.students.repository.StudentRepository;
 import org.junit.jupiter.api.BeforeEach;

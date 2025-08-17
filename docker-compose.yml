@@ -1,4 +1,3 @@
-
 services:
   app:
     build: .
@@ -11,9 +10,10 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/student_db
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/student_db?stringtype=unspecified&options=-c%20TimeZone=Asia/Kolkata
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root123
+      TZ: Asia/Kolkata   # JVM container timezone
     restart: always
 
   postgres:
@@ -23,6 +23,8 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root123
       POSTGRES_DB: student_db
+      TZ: Asia/Kolkata   # sets container timezone
+      PGTZ: Asia/Kolkata # sets Postgres internal timezone
     ports:
       - "5432:5432"
     networks:
